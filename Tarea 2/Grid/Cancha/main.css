@@ -1,0 +1,135 @@
+/* .grid-container {
+    border-color: black;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1px;
+}
+
+.grid-container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #fff;
+    background-color: rgb(5, 139, 12);
+}
+
+.item1 {
+    grid-column: span 6;
+}
+
+.item2 {
+    grid-row: span 6;
+    grid-column: span 3;
+}
+
+.item3 {
+    grid-row: span 3;
+    grid-column: span 3;
+} */
+
+.item-a {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-2 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 8;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-4 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-5 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-6 {
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 8;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-8 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-9 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-10 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.item-11 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    background-color: rgb(5, 139, 12);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.container {
+    display: grid;
+    grid-template: repeat(8, 50px) / repeat(12, 100px);
+    gap: 0px;
+}

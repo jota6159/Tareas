@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.flex-container {
+    position: relative;
+    border: 1px solid silver;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+}
+
+ :root {
+    --primary-dark-cyan: hsl(185, 75%, 39%);
+    --primary-very-dark-blue: hsl(229, 23%, 23%);
+    --primary-dark-blue: hsl(227, 10%, 46%);
+    --dark_gray: hsl(0, 0%, 91%);
+}
+
+.flex-container2 {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    height: 150%;
+    width: 100px;
+}
+
+.flex-container3 {
+    position: relative;
+    left: -50px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    height: 75px;
+    width: 200px;
+    display: flex;
+}
+
+.flex-container-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-column2 {
+    position: relative;
+    top: -50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap .flex-item {
+    background-color: hsl(185, 75%, 39%);
+}
+
+.alinear {
+    position: relative;
+    left: 25%;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.wrap-reverse .flex-item {
+    background: deepskyblue;
+}
+
+.flex-item {
+    justify-content: center;
+    position: relative;
+    max-height: 10%;
+    margin: 50px;
+    padding: 160px 50px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 91%);
+    background-image: url(bg-pattern-card.svg);
+    background-repeat: repeat no-repeat;
+    /*  background-size: 50% 50%; */
+}
+
+.flex-item2 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.flex-item3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 10PX;
+    border-radius: 8px;
+    background-color: var(--dark_gray);
+    color: var(--primary-very-dark-blue);
+    font-weight: 700;
+}
+
+.flex-item4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10PX;
+    border-radius: 8px;
+    background-color: var(--dark_gray);
+    color: var(--primary-dark-blue);
+    font-weight: 400;
+}
+
+.texto {
+    position: relative;
+    color: var(--primary-very-dark-blue);
+    opacity: 100%;
+    font: 1px;
+    position: relative;
+    top: -100px;
+}
+
+.texto2 {
+    position: relative;
+    color: var(--primary-dark-blue);
+    opacity: 100%;
+    font: 1px;
+    position: relative;
+    top: -130px;
+    font-weight: 400;
+}
+
+.imgR {
+    position: relative;
+    top: -50%;
+    border-radius: 100%;
+    border: 10px solid hsl(0, 0%, 91%);
+}
+
+.hrc {
+    color: var(--primary-dark-blue);
+    size: 200px;
+}
+
+.txt {
+    position: relative;
+    color: var(--primary-very-dark-blue);
+    opacity: 100%;
+    font: 1px;
+}
+
+.txt2 {
+    position: relative;
+    color: var(--primary-dark-blue);
+    opacity: 100%;
+    font: 2px;
+}
