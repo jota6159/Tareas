@@ -14,7 +14,7 @@ var valido;
 btns.addEventListener("click", function() {
     var n1 = inputUno.value;
     var n2 = inputDos.value;
-    validar(n1, n2);
+    validarEntrada(n1, n2);
 
     if (valido) {
         /* Obtenemos el valor de cada input accediendo a su atributo "value" */
@@ -22,42 +22,39 @@ btns.addEventListener("click", function() {
         /* Llamamos a una función que permite realizar la suma de los números y los
         mostramos al usuario" */
         resultado.innerHTML = suma(n1, n2);
-    } else {
-        alert("no son numeros enteros");
     }
 });
 btnr.addEventListener("click", function() {
     var n1 = inputUno.value;
     var n2 = inputDos.value;
-    validar(n1, n2);
+
+    validarEntrada(n1, n2);
     if (valido) {
         /* Obtenemos el valor de cada input accediendo a su atributo "value" */
 
         /* Llamamos a una función que permite realizar la suma de los números y los
         mostramos al usuario" */
         resultado.innerHTML = resta(n1, n2);
-    } else {
-        alert("no son numeros enteros");
     }
 });
 btnm.addEventListener("click", function() {
     /* Obtenemos el valor de cada input accediendo a su atributo "value" */
     var n1 = inputUno.value;
     var n2 = inputDos.value;
-    validar(n1, n2);
+
+    validarEntrada(n1, n2);
     if (valido) {
 
         /* Llamamos a una función que permite realizar la suma de los números y los
         mostramos al usuario" */
         resultado.innerHTML = multi(n1, n2);
-    } else {
-        alert("no son numeros enteros");
     }
 });
 btnd.addEventListener("click", function() {
     var n1 = inputUno.value;
     var n2 = inputDos.value;
-    validar(n1, n2);
+
+    validarEntrada(n1, n2);
     if (valido) {
         /* Obtenemos el valor de cada input accediendo a su atributo "value" */
 
@@ -68,8 +65,6 @@ btnd.addEventListener("click", function() {
         } else {
             alert("división por 0 no esta definida");
         }
-    } else {
-        alert("no son numeros enteros");
     }
 });
 
@@ -94,10 +89,22 @@ function div(n1, n2) {
     return parseInt(n1) / parseInt(n2);
 }
 
-function validar(n1, n2) {
+function validarEntero(n1, n2) {
     if (n1 % 1 == 0 & n2 % 1 == 0) {
         valido = true;
     } else {
+        alert("no son numeros enteros");
         valido = false;
+    }
+}
+
+function validarEntrada(n1, n2) {
+    if (n1 === '' | n2 === '') {
+        valido = false;
+        alert("No se han escrito los dos números");
+
+    } else {
+        valido = true;
+        validarEntero(n1, n2);
     }
 }
