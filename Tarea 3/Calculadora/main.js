@@ -95,7 +95,7 @@ function div(n1, n2) {
 }
 
 function validar(n1, n2) {
-    if (n1 % 1 == 0) {
+    if (n1 % 1 == 0 & n2 % 1 == 0) {
         valido = true;
     } else {
         valido = false;
