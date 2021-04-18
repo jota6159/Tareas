@@ -94,7 +94,6 @@ punto.onclick = function() {
 }
 sumar.onclick = function() {
     display2.textContent = "+";
-    console.log(activo + "al sumar");
     display1.textContent = display3.textContent;
     display3.textContent = "";
 
