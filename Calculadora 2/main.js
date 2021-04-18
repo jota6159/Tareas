@@ -22,11 +22,6 @@ var display2 = document.getElementById('medio');
 var display3 = document.getElementById('abajo');
 
 
-
-
-
-
-
 cero.onclick = function() {
     display3.textContent = display3.textContent + "0";
 }
@@ -61,18 +56,17 @@ nueve.onclick = function() {
 
 dividir.onclick = function() {
     display2.textContent = "/";
-    /*  activo = 3; */
+
     display1.textContent = display3.textContent;
     display3.textContent = "";
 }
 signo.onclick = function() {
 
-    /*   activo = 3; */
+
     display3.textContent = parseFloat(display3.textContent) * -1;
 }
 multiplicar.onclick = function() {
     display2.textContent = "X";
-    /*  activo = 3; */
     display1.textContent = display3.textContent;
     display3.textContent = "";
 }
@@ -83,7 +77,6 @@ borrar.onclick = function() {
 }
 restar.onclick = function() {
     display2.textContent = "-";
-    /*   activo = 3; */
     display1.textContent = display3.textContent;
     display3.textContent = "";
 }
@@ -92,7 +85,6 @@ limpiar.onclick = function() {
     display1.textContent = "";
     display2.textContent = "";
     display3.textContent = "";
-    /*   activo = 1; */
     console.log(activo + "al borrar");
     display1.textContent = display3.textContent;
 }
@@ -102,7 +94,6 @@ punto.onclick = function() {
 }
 sumar.onclick = function() {
     display2.textContent = "+";
-    activo = 3;
     console.log(activo + "al sumar");
     display1.textContent = display3.textContent;
     display3.textContent = "";
@@ -136,7 +127,6 @@ igual.onclick = function() {
 
 
             break;
-
 
     }
 }
