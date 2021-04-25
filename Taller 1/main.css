@@ -1,0 +1,46 @@
+.header {
+    size: 5rem;
+}
+
+.container3 {
+    display: grid;
+    height: 30%;
+    width: 70%;
+    grid-template: repeat(4, 70%) / repeat(1, 100%);
+    justify-self: flex-end;
+    justify-content: flex-end;
+}
+
+.display {
+    opacity: 100%;
+    font: 2px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    height: 60%;
+    width: 100%;
+    text-align: left;
+}
+
+.col {
+    margin-top: 50px;
+}
+
+.item {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin: 50px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25, 52, 73);
+    border: none;
+}
+
+.fecha {
+    size: 0.5rem;
+}
+
+.comentarr {
+    width: 200px;
+}
