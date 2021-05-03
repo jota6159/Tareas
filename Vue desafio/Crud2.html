@@ -6,115 +6,143 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
 
 <body>
     <div id="app" class="container mx-auto mt-4">
-        <h4>Añadir Producto</h4>
         <div>
-            <h6>asd</h6>
+            <h4>Mantenedor de productos</h4>
+            <div>
+                <h6>Añadir un producto</h6>
 
 
-
-        </div>
-
-        <div id="lista">
-            <input v-model="nombre" type="text" placeholder="Agregar Nombre" @keyup.enter="agregarElemento">
-            <input v-model="descripcion" type="text" placeholder="Agregar Descripcióm" @keyup.enter="agregarElemento">
-            <input v-model="precio" type="text" placeholder="Agregar Precio" @keyup.enter="agregarElemento">
-            <button v-on:click="agregarElemento" class="btn btn-success">Agregar</button>
-            <pre>{{ $data }}</pre>
-            <p>se ha apretado {{ contador }} veces</p>
-
-
-
-            <div v-if="elementos.lenght!=0">
-
-
-                <li vif class="list-group-item" v-for="(elemento,index) in elementos" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
-                    <div v-if="elementos[index].editando!=true">
-
-                        {{ elemento.nombre }} {{ elemento.descripcion }} {{ elemento.precio }}
-                        <button class="btn btn-outline-primary" @click="editarElemento(index)">Editar</button>
-                        <button class="btn btn-danger" @click="eliminarElemento(index)">Eliminar</button>
-
-                    </div>
-                    <div v-else><input v-model="editNombre" class="form-control" type="text">
-                        <input v-model="editDescripcion" class="form-control" type="text">
-                        <input v-model="editPrecio" class="form-control" type="text">
-                        <button class="btn btn-secondary" @click="elementos[index].editando = false">Cancelar</button>
-                        <button class="btn btn-success" @click="guardar(index)">Guardar</button>
-                    </div>
-                </li>
 
             </div>
 
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script>
-            const app = new Vue({
-                el: '#lista',
-                data: {
-                    contador: 0,
-                    elementos: [
-                        /* {
-                                                nombre: "asd",
-                                                descripcion: "asd",
-                                                precio: "1"
-                                            }, {
-                                                nombre: "asd",
-                                                descripcion: "asd",
-                                                precio: "2"
-                                            }, {
-                                                nombre: "asd",
-                                                descripcion: "asd",
-                                                precio: "3"
-                                            }, {
-                                                nombre: "asd",
-                                                descripcion: "asd",
-                                                precio: "4"
-                                            } */
-                    ],
-                    nombre: '',
-                    descripcion: '',
-                    precio: '',
+            <div id="lista">
+                <input v-model="nombre" type="text" placeholder="Agregar Nombre" @keyup.enter="agregarElemento">
+                <input v-model="descripcion" type="text" placeholder="Agregar Descripción" @keyup.enter="agregarElemento">
+                <input v-model="precio" type="number" placeholder="Agregar Precio" @keyup.enter="agregarElemento">
+                <button v-on:click="agregarElemento" class="btn btn-success">Agregar</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col"><span class="texto2">Nombre</span></div>
+                        <div class="col"><span class="texto2">Descripción</div>
+                        <div class="col"><span class="texto2">Precio</div>
 
-                    editIndex: -1,
-                },
-                methods: {
-                    agregarElemento() {
+                        <div class="col"> </div>
+
+                    </div>
+
+                <div v-if="elementos.lenght!=0 & error==false">
+
+
+                    <li class="list-group-item list-group-horizontal" v-for="(elemento,index) in elementos" :key="index">
+                        <div v-if="elementos[index].editando!=true">
+                            
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="texto">{{ elemento.nombre }}</span>
+                        </div>
+                        <div class="col">
+                            <span class="texto">{{ elemento.descripcion }}</span>
+                        </div>
+                        <div class="col">
+                            <span class="texto">${{ elemento.precio }}</span>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-primary" @click="editarElemento(index)">Editar</button>
+
+                            <button class="btn btn-danger" @click="eliminarElemento(index)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div v-else>
+                    <div class="row">
+                        <div class="col">
+                            <input v-model="editNombre" class="form-control-s" type="text">
+                        </div>
+                        <div class="col">
+                            <input v-model="editDescripcion" class="form-control-s" type="text">
+                        </div>
+                        <div class="col">
+                            <input v-model="editPrecio" class="form-control-s" type="text">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-secondary" @click="elementos[index].editando = false">Cancelar</button>
+                            <button class="btn btn-success" @click="guardar(index)">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </li>
+
+        </div>
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#lista',
+            data: {
+                contador: 0,
+                elementos: [],
+                nombre: '',
+                descripcion: '',
+                precio: '',
+                error: false
+            },
+            methods: {
+                agregarElemento() {
+                    if (this.nombre != '' & this.descripcion != '' & this.precio != '') {
+
+
                         this.contador += 1
                         this.elementos.push({
                             nombre: this.nombre,
                             descripcion: this.descripcion,
                             precio: this.precio,
                             editando: false
+
                         })
-                    },
-                    editarElemento(index) {
-                        this.elementos[index].editando = true;
-                        this.editNombre = this.elementos[index].nombre;
-                        this.editDescripcion = this.elementos[index].descripcion;
-                        this.editPrecio = this.elementos[index].precio;
+                        this.nombre = '';
+                        this.descripcion = '';
+                        this.precio = '';
 
-                    },
-                    guardar(index) {
-                        this.elementos[index].nombre = editNombre;
-                        this.elementos[index].descripcion = editDescripcion;
-                        this.elementos[index].precio = editPrecio;
-                    },
-                    eliminarElemento(index) {
-                        this.elementos.splice(index, 1);
+                    } else {
+                        error = true;
+                        alert("campos sin rellenar");
                     }
+                },
+                editarElemento(index) {
+                    this.elementos[index].editando = true;
+                    this.editNombre = this.elementos[index].nombre;
+                    this.editDescripcion = this.elementos[index].descripcion;
+                    this.editPrecio = this.elementos[index].precio;
 
+                },
+                guardar(index) {
+                    this.elementos[index].nombre = this.editNombre;
+                    this.elementos[index].descripcion = this.editDescripcion;
+                    this.elementos[index].precio = this.editPrecio;
+                    this.elementos[index].editando = false;
 
+                },
+                eliminarElemento(index) {
+                    this.elementos.splice(index, 1);
                 }
 
-            })
-        </script>
+
+            }
+
+        })
+    </script>
 
 
 
