@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+        <form @submit.prevent="sendForm">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <div class="form-group"> <label>Nombre</label> <input v-model="product.name" type="text" class="form-control" :class="{ 'is-invalid': error && invalidName }" /> </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group"> <label>Descripción</label> <input v-model="product.description" type="text" class="form-control" :class="{ 'is-invalid': error && invalidDescription }" /> </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group"> <label>Precio</label> <input v-model="product.price" type="number" class="form-control" :class="{ 'is-invalid': error && invalidPrice }" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div v-if="error" class="alert alert-danger" role="alert"> ¡Debes rellenar todos los campos! </div>
+                        <div v-if="sent" class="alert alert-success" role="alert"> El producto ha sido agregada correctamente! </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <div class="form-group"> <button type="submit" class="btn btn-primary"> Añadir Producto </button> </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

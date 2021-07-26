@@ -1,0 +1,33 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('Prueba');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+
+db.publicaciones.drop();
+
+
+// The drop() command destroys all data from a collection.
+
+
+// Insert a few documents into the sales collection.
+db.publicaciones.insertMany([
+{  Autor: "Autor 1", Titulo: "Cartuchos WWII", descripcion: "mucho texto", Categorias: ["A"] },
+  {  Autor: "Autor 2", Titulo: "3 Meses 2 Cuernos", descripcion: "alto libro", Categorias: ["C"] },
+  { Autor: "Autor 3", Titulo: "Velociraptor 5 Metros", descripcion: "buena peli mejor libro", Categorias: ["B", "C"]}
+]);
+db.publicaciones.updateOne(
+      { "Autor" : "Autor 1" },
+      { $set: { "descripcion" : "poco texto" } }
+   );
+   
+   db.products.deleteOne(
+      { "Titulo" : "3 Meses 2 Cuernos" },
+   );
+   db.publicaciones.find();
+

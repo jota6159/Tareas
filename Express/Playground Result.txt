@@ -1,0 +1,24 @@
+[{
+        "_id": {
+            "$oid": "60bd4421af85754198612223"
+        },
+        "Autor": "Autor 1",
+        "Titulo": "Cartuchos WWII",
+        "descripcion": "poco texto",
+        "Categorias": [
+            "A"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "60bd4421af85754198612225"
+        },
+        "Autor": "Autor 3",
+        "Titulo": "Velociraptor 5 Metros",
+        "descripcion": "buena peli mejor libro",
+        "Categorias": [
+            "B",
+            "C"
+        ]
+    }
+]
